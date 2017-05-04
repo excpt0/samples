@@ -23,7 +23,10 @@ WS_AUTHORIZED = 2
 WS_CLOSED = 3
 
 
-class WSAPIHandler():
+class WSAPIHandler(object):
+    """
+    Main client-side requests handler. Validate incoming requests and proxify to inner services.
+    """
     __slots__ = ['ws', 'conn_id', 'request_sender', 'exec_limits',
                  '_method_limits', 'session_id', 'request_id', 'status',
                  'allow_no_init', ]

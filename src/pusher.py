@@ -17,6 +17,11 @@ from .log import log
 
 
 class SanicWSPusher(object):
+    """
+    Handler for server-side notification (requests), which deliver to the users
+    through the websocket connections.
+    """
+
     def __init__(self):
         self.is_running = False
         self.storage = ConnectionsStorage()
